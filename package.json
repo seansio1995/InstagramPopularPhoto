@@ -1,0 +1,14 @@
+{
+  "name": "instagram",
+  "version": "1.0.0",
+  "description": "This is a photo app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sean Xiao",
+  "license": "ISC",
+  "dependencies": {
+    "instagram-node": "^0.5.8"
+  }
+}

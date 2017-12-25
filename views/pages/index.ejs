@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <% include ../partials/head %>
+    <title></title>
+  </head>
+  <body class="container">
+
+    <header>
+  <% include ../partials/header %>
+    </header>
+
+
+    <main>
+        <div class="row">
+        <%  medias.forEach(function(media) { %>
+            <div class="instagram-pic col-sm-3">
+              <a href="<%= media.link%>" target="_blank">
+                <img src="<%= media.images.standard_resolution.url%>" alt="" class="img-responsive">
+
+              </a>
+            </div>
+
+            <div class="instagram-bar">
+                <div class="likes">
+                    <span class="glyphicon glyphicon-heart"></span>
+                    <%= media.likes.count %>
+                </div>
+            </div>
+
+
+            <div class="comments">
+              <span class="glyphicon glyphicon-comment"></span>
+              <%= media.comment.count %>
+            </div>
+           <% }); %>
+        </div>
+
+    </main>
+
+    <footer>
+  <% include ../partials/footer %>
+    </footer>
+  </body>
+</html>
